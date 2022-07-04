@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.empren10.view.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_balanceFragment2"
+            app:destination="@id/balanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="com.example.empren10.view.fragment.BalanceFragment"
+        android:label="fragment_balance"
+        tools:layout="@layout/fragment_balance" >
+        <action
+            android:id="@+id/action_balanceFragment2_to_ventasFragment"
+            app:destination="@id/ventasFragment" />
+        <action
+            android:id="@+id/action_balanceFragment2_to_gastosFragment"
+            app:destination="@id/gastosFragment" />
+        <action
+            android:id="@+id/action_balanceFragment_to_contactosFragment"
+            app:destination="@id/contactosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ventasFragment"
+        android:name="com.example.empren10.view.fragment.VentasFragment"
+        android:label="fragment_ventas"
+        tools:layout="@layout/fragment_ventas" />
+    <fragment
+        android:id="@+id/gastosFragment"
+        android:name="com.example.empren10.view.fragment.GastosFragment"
+        android:label="fragment_gastos"
+        tools:layout="@layout/fragment_gastos" />
+    <fragment
+        android:id="@+id/contactosFragment"
+        android:name="com.example.empren10.view.fragment.ContactoFragment"
+        android:label="fragment_contacto"
+        tools:layout="@layout/fragment_contacto" >
+        <action
+            android:id="@+id/action_contactoFragment_to_contactoAddFragment"
+            app:destination="@id/contactoAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactoAddFragment"
+        android:name="com.example.empren10.view.fragment.ContactoAddFragment"
+        android:label="fragment_contacto_add"
+        tools:layout="@layout/fragment_contacto_add" />
+</navigation>

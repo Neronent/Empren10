@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Empren10</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home_title">Inicio</string>
+    <string name="balance_title">Balance</string>
+    <string name="grafica_title">Estadistica</string>
+    <string name="nueva_venta">Nueva Venta</string>
+    <string name="nuevo_gasto">Nuevo Gasto</string>
+    <string name="Utilidad_total">Utilidad total</string>
+    <string name="Ventas_totales">Ventas totales</string>
+    <string name="Gastos_totales">Gastos totales</string>
+    <string name="utilidad_numeros">C$ 0</string>
+    <string name="ventas_totales_cordobas">C$ 0</string>
+    <string name="gastos_totales_cordobas">C$ 0</string>
+    <string name="title_ventas">Ventas</string>
+    <string name="ingresar_fecha">Ingrese la fecha de Venta</string>
+    <string name="estado_pagado">Pagado</string>
+    <string name="estado_deuda">Deuda</string>
+    <string name="precio">Precio</string>
+    <string name="requerido">Requerido</string>
+    <string name="nombre_producto">Nombre del servicio/producto</string>
+    <string name="metodos_de_pago">Seleccione un metodo de pago</string>
+    <string name="Crear_venta">Crear Venta</string>
+    <string name="metodos_de_pago_helper">Metodos de pago</string>
+    <string name="Crear_gasto">Crear Gasto</string>
+    <string name="fecha_producto">Fecha:</string>
+    <string name="metodopago_producto">Metodo de pago:</string>
+    <string name="total_producto">Total:</string>
+    <string name="eliminar_button">Boton para eliminar</string>
+    <string name="buscar">Buscar Contacto...</string>
+    <string name="Crear_nuevo_contacto">Crear nuevo contacto</string>
+    <string name="nombre_contacto">Nombre (Obligatorio)</string>
+    <string name="telefono_contacto">Celular</string>
+    <string name="correo_contacto">Email</string>
+    <string name="website_contacto">Pagina web</string>
+    <string name="Actualizar_contacto">Actualizar contacto</string>
+    <string name="contactos_title">Contactos</string>
+    <string name="helper_text_require">Requerido</string>
+    <string name="message_valid">Revise los campos requeridos antes de continuar</string>
+    <string name="Actualizar_venta">Actualizar Venta</string>
+    <string name="ingresar_fecha_gasto">Ingrese fecha del gasto</string>
+    <string name="Guardar_venta">Guardar Venta</string>
+    <string name="Guardar_gasto">Guardar Gasto</string>
+    <string name="dialog_options_title">Estas seguro de eliminar esta venta?</string>
+    <string name="home_text">"Bienvido a"</string>
+
+    <string-array name="metodo_pago">
+        <item>Efectivo</item>
+        <item>Tarjeta</item>
+        <item>Transferencia Bancaria</item>
+        <item>Otro</item>
+    </string-array>
+
+</resources>

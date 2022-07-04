@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.BalanceDetalleFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarcol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/NoActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/idToolColapse"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/primaryColor">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/ToolDetalleBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewResumen"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AppBarcol">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvNombreProductoSeleccionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Nombre del producto"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha_producto"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNombreProductoSeleccionado" />
+
+            <TextView
+                android:id="@+id/tvFechaProductoSeleccionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="10 junio de 2022"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toEndOf="@id/tvFecha"
+                app:layout_constraintTop_toBottomOf="@id/tvNombreProductoSeleccionado"/>
+
+            <TextView
+                android:id="@+id/tvMetodoPago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/metodopago_producto"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFecha" />
+
+            <TextView
+                android:id="@+id/tvMetodoPagoProductoSeleccionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Efectivo"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toEndOf="@id/tvMetodoPago"
+                app:layout_constraintTop_toBottomOf="@id/tvFechaProductoSeleccionado"/>
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_producto"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMetodoPago" />
+
+            <TextView
+                android:id="@+id/tvTotalProductoSeleccionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="C$ 5,000"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toEndOf="@id/tvTotal"
+                app:layout_constraintTop_toBottomOf="@id/tvMetodoPagoProductoSeleccionado"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:backgroundTint="@color/red"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/eliminar_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

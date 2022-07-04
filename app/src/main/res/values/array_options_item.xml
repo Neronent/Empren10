@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="array_eliminar">
+        <item>@string/dialog_delete_confirm</item>
+        <item>@string/dialog_delete_cancel</item>
+    </string-array>
+
+    <string-array name="array_eliminar_contacto">
+        <item>@string/dialog_delete_confirm</item>
+        <item>@string/dialog_delete_cancel</item>
+    </string-array>
+    <string name="dialog_delete_confirm">Eliminar</string>
+    <string name="dialog_delete_cancel">Cancelar</string>
+</resources>
