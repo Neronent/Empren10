@@ -19,6 +19,7 @@
 
     <color name="verdecito">#2FB84D</color>
     <color name="red">#FF0000</color>
+    <color name="gray">#5D5D5D</color>
     <color name="color_divider">#1F0000</color>
 
 </resources>

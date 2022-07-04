@@ -45,6 +45,8 @@
     <string name="Guardar_gasto">Guardar Gasto</string>
     <string name="dialog_options_title">Estas seguro de eliminar esta venta?</string>
     <string name="home_text">"Bienvido a"</string>
+    <string name="main_error_no_website">Esta tienda no cuenta con un sitio web.</string>
+    <string name="main_error_no_resolve">No se encontró ninguna app compatible</string>
 
     <string-array name="metodo_pago">
         <item>Efectivo</item>

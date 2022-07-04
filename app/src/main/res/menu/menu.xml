@@ -10,10 +10,6 @@
         android:title="@string/balance_title"
         android:icon="@drawable/ic_stats"/>
     <item
-        android:id="@+id/graficaFragment"
-        android:title="@string/grafica_title"
-        android:icon="@drawable/ic_grafica"/>
-    <item
         android:id="@+id/contactosFragment"
         android:title="@string/contactos_title"
         android:icon="@drawable/ic_contacto"/>

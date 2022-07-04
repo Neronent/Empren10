@@ -1,5 +1,8 @@
 package com.example.empren10.view.fragment
 
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -56,6 +59,21 @@ class ContactoFragment : Fragment(), OnClickListener {
             NavHostFragment.findNavController(this).navigate(R.id.contactoAddFragment, bundle)
         }
 
+        binding.imgBorrar.setOnClickListener{
+            val items = resources.getStringArray(R.array.array_eliminar_contacto)
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.dialog_options_title)
+                .setItems(items) { _, i ->
+                    when (i) {
+                        0 -> mContactoViewModel.deleteAllContactos()
+
+                        1 -> Toast.makeText(requireContext(),"Cancelado", Toast.LENGTH_SHORT).show()
+
+                    }
+                }
+                .show()
+        }
+
         return binding.root
     }
 
@@ -78,11 +96,20 @@ class ContactoFragment : Fragment(), OnClickListener {
                 when (i) {
                     0 -> mContactoViewModel.deleteContacto(contactoEntity)
 
-                    1 -> Toast.makeText(requireContext(),"Cancelado", Toast.LENGTH_SHORT).show()
+                    1 -> dial(contactoEntity.telefonoContacto)
+                    
+                    2 -> Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
 
                 }
             }
             .show()
+    }
+
+    private fun dial(phone: String){
+        val intent = Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:${phone}")
+        }
+        startActivity(intent)
     }
 
 }
